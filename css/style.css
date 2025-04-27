@@ -327,12 +327,7 @@ body {
   margin-right: auto;
 }
 
-html.no-scroll,
-body.no-scroll {
-  /* bestehende Eigenschaften erhalten */
-  overflow: hidden;
-  height: 100vh;
 
-  /* neuer Hintergrund */
+body.detail-page {
   background: url("../img/stars.gif") center center / cover no-repeat;
 }
