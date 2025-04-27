@@ -329,6 +329,10 @@ body {
 
 html.no-scroll,
 body.no-scroll {
+  /* bestehende Eigenschaften erhalten */
   overflow: hidden;
   height: 100vh;
+
+  /* neuer Hintergrund */
+  background: url("../img/stars.gif") center center / cover no-repeat;
 }
