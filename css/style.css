@@ -210,6 +210,19 @@ body {
   cursor: pointer;
 }
 
+/* Goldene Haus-Ikone */
+.nav-icon.home .icon-home,
+.nav-icon.book .icon-book {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+/* Abstand zwischen den Icons, falls nötig */
+.bottom-nav .nav-icon + .nav-icon {
+  margin-left: 10rem;
+}
+
 /* Responsive: ab 600px zwei Spalten auf stars */
 @media (min-width: 600px) {
   .star-list {
