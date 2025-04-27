@@ -37,7 +37,7 @@ body {
 
 .header h1 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;  /* verkleinerte Schrift */
+  font-size: 1.5rem; /* verkleinerte Schrift */
   color: var(--color-gold);
 }
 
@@ -145,10 +145,10 @@ body {
 .detail-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;     /* engerer Abstand */
+  gap: 0.5rem; /* engerer Abstand */
   max-width: 280px; /* schmaler */
   margin: 0 auto;
-  padding: 0.5rem;  /* kompakter Innenabstand */
+  padding: 0.5rem; /* kompakter Innenabstand */
 }
 
 /* Detail Page – Bild mit goldenem Rahmen */
@@ -179,7 +179,7 @@ body {
 .detail-container .btn {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.75rem;   /* kompakter */
+  padding: 0.75rem; /* kompakter */
   border: 3px solid var(--color-gold); /* dünnerer Rand */
   border-radius: 0.5rem; /* gleiche Rundung */
   background: var(--color-detail-bg); /* heller Braunton */
@@ -257,11 +257,11 @@ body {
 }
 
 .detail-image .close svg path {
-  fill: red;             /* Innenfarbe beibehalten */
-  stroke: red;           /* roter Außenstrich */
-  stroke-width: 2px;     /* Stärke des Strichs */
+  fill: red; /* Innenfarbe beibehalten */
+  stroke: red; /* roter Außenstrich */
+  stroke-width: 2px; /* Stärke des Strichs */
   stroke-linecap: round; /* abgerundete Enden */
-  stroke-linejoin: round;/* abgerundete Ecken */
+  stroke-linejoin: round; /* abgerundete Ecken */
 }
 
 /* Responsive: ab 600px zwei Spalten auf stars */
@@ -275,7 +275,7 @@ body {
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 @keyframes fadeIn {
