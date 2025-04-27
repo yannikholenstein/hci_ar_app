@@ -257,17 +257,12 @@ body {
   font-weight: bold;
   font-size: 1.25rem;
   padding: 1rem 2rem;
-  border-radius: 2rem;
+  border-radius: 0.5rem; /* <- gleich wie Bild! */
   text-decoration: none;
   box-shadow: 0px 5px 15px rgba(241, 196, 15, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
-.btn.golden:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(241, 196, 15, 0.7);
-}
 /* Zitat unter Spotlight */
 .spotlight-quote {
   font-family: var(--font-body);
