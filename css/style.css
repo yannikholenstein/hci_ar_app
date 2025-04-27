@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500&display=swap");
 
 :root {
-  --color-brown: #3A312B;
-  --color-gold: #F1C40F;
-  --color-bg: #FFFFFF;
-  --color-btn-bg: #F5F5F5;
-  --color-detail-bg: #F5E6C8;
-  --font-heading: 'Cinzel', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --color-brown: #3a312b;
+  --color-gold: #f1c40f;
+  --color-bg: #ffffff;
+  --color-btn-bg: #f5f5f5;
+  --color-detail-bg: #f5e6c8;
+  --font-heading: "Cinzel", serif;
+  --font-body: "Montserrat", sans-serif;
 }
 
 * {
@@ -29,7 +29,10 @@ body {
   background: var(--color-brown);
   padding: 1rem;
   text-align: center;
-  position: relative;
+  position: fixed; /* <- Wichtig! */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Damit es immer ganz vorne bleibt */
 }
 
 .header h1 {
@@ -40,7 +43,7 @@ body {
 
 .main {
   flex: 1;
-  padding: 1rem;
+  padding: 6rem 1rem 1rem 1rem; /* oben mehr Abstand (wegen Header) */
 }
 
 .subtitle {
@@ -53,7 +56,7 @@ body {
 .hero-image img {
   width: 100%;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 }
 
@@ -95,10 +98,14 @@ body {
 }
 
 .bottom-nav {
+  position: fixed; /* <- hinzufügen */
+  bottom: 0;
+  width: 100%;
+  background: var(--color-brown);
   display: flex;
   justify-content: space-around;
-  background: var(--color-brown);
   padding: 0.75rem 0;
+  z-index: 1000;
 }
 
 .nav-icon {
@@ -117,11 +124,11 @@ body {
 }
 
 .star-item a {
-    display: block;           /* Nur das Bild wird zum Block-Element */
-    padding: 0;               /* Kein Innenabstand */
-    border: none;             /* Kein Rahmen */
-    background: none;         /* Kein Hintergrund */
-  }
+  display: block; /* Nur das Bild wird zum Block-Element */
+  padding: 0; /* Kein Innenabstand */
+  border: none; /* Kein Rahmen */
+  background: none; /* Kein Hintergrund */
+}
 
 /* Blende den Text aus */
 .star-item span {
@@ -131,9 +138,9 @@ body {
 /* Bild bleibt 100% Breite */
 .star-item img {
   width: 80%;
-  margin: 0 auto;    /* zentriert das Bild im Listenelement */
-  display: block;    /* sorgt dafür, dass margin:auto funktioniert */
-  border-radius: 0;         /* Rundungen entfernen, falls gewünscht */
+  margin: 0 auto; /* zentriert das Bild im Listenelement */
+  display: block; /* sorgt dafür, dass margin:auto funktioniert */
+  border-radius: 0; /* Rundungen entfernen, falls gewünscht */
 }
 
 /* Detail Page */
@@ -143,26 +150,25 @@ body {
   gap: 1rem;
 
   /* neu: Breitenbegrenzung und zentrieren */
-  max-width: 350px;  
-  margin: 0 auto;    
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 /* Detail Page – Bild mit goldenem Rahmen */
 .detail-image img {
-  width: 100%;                   /* volle Breite des Containers */
+  width: 100%; /* volle Breite des Containers */
   box-sizing: border-box;
-  border: 4px solid var(--color-gold);  /* dicker goldener Rahmen */
-  border-radius: 0.5rem;         /* sanft abgerundete Ecken */
+  border: 4px solid var(--color-gold); /* dicker goldener Rahmen */
+  border-radius: 0.5rem; /* sanft abgerundete Ecken */
 }
-
 
 /* Detail Page – Infobox volle Container-Breite */
 .detail-info {
-  width: 100%;                        /* volle Breite des Containers */
+  width: 100%; /* volle Breite des Containers */
   box-sizing: border-box;
-  padding: 1rem;                      /* Innenabstand für Text */
-  border: 4px solid var(--color-gold);/* dicker Gold-Rand wie beim Bild */
-  border-radius: 0.5rem;              /* dieselben Rundungen */
+  padding: 1rem; /* Innenabstand für Text */
+  border: 4px solid var(--color-gold); /* dicker Gold-Rand wie beim Bild */
+  border-radius: 0.5rem; /* dieselben Rundungen */
   background: var(--color-detail-bg); /* dein hellbrauner Hintergrund */
 }
 
@@ -170,17 +176,16 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
-  border: 4px solid var(--color-gold);    /* goldener Rahmen */
-  border-radius: 0.5rem;                  /* gleiche Rundung */
-  background: var(--color-detail-bg);     /* heller Braunton */
-  color: var(--color-brown);              /* braune Schrift */
+  border: 4px solid var(--color-gold); /* goldener Rahmen */
+  border-radius: 0.5rem; /* gleiche Rundung */
+  background: var(--color-detail-bg); /* heller Braunton */
+  color: var(--color-brown); /* braune Schrift */
   font-weight: 500;
   text-align: center;
   text-decoration: none;
   display: block;
   margin-top: 0.5rem;
 }
-
 
 .detail-info p {
   margin-bottom: 0.5rem;
@@ -228,4 +233,64 @@ body {
   .star-list {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* Fade-in animation for main content */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Special golden button for homepage */
+.btn.golden {
+  background: linear-gradient(135deg, var(--color-gold), #e1b000);
+  color: var(--color-brown);
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(241, 196, 15, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.btn.golden:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(241, 196, 15, 0.7);
+}
+/* Zitat unter Spotlight */
+.spotlight-quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-brown);
+  background: var(--color-detail-bg);
+  border-left: 4px solid var(--color-gold);
+  padding: 0.75rem 1rem;
+  margin: 1rem auto 2rem auto;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+/* Dekorativer goldener Balken unten */
+.gold-divider {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  height: 6px;
+  width: 120px;
+  background: linear-gradient(90deg, var(--color-gold), #e1b000);
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
