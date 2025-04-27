@@ -223,6 +223,41 @@ body {
   margin-left: 10rem;
 }
 
+/* Detail-Image-Container für absolute Positionierung */
+.detail-image {
+  position: relative;
+}
+
+/* Close-Button als Kreis mit SVG drin */
+.detail-image .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 3px solid var(--color-gold);
+  background: var(--color-detail-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* SVG im Button skalieren */
+.detail-image .close svg {
+  fill: red;
+}
+.detail-image .close svg path {
+  fill: red;             /* Innenfarbe beibehalten */
+  stroke: red;           /* roter Außenstrich */
+  stroke-width: 2px;     /* Stärke des Strichs – größer = fetter */
+  stroke-linecap: round; /* abgerundete Enden */
+  stroke-linejoin: round;/* abgerundete Ecken */
+}
+
 /* Responsive: ab 600px zwei Spalten auf stars */
 @media (min-width: 600px) {
   .star-list {
