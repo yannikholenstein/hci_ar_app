@@ -37,7 +37,7 @@ body {
 
 .header h1 {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.5rem;  /* verkleinerte Schrift */
   color: var(--color-gold);
 }
 
@@ -130,12 +130,10 @@ body {
   background: none; /* Kein Hintergrund */
 }
 
-/* Blende den Text aus */
 .star-item span {
-  display: none;
+  display: none; /* Text ausblenden */
 }
 
-/* Bild bleibt 100% Breite */
 .star-item img {
   width: 80%;
   margin: 0 auto; /* zentriert das Bild im Listenelement */
@@ -147,18 +145,17 @@ body {
 .detail-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
-  /* neu: Breitenbegrenzung und zentrieren */
-  max-width: 350px;
+  gap: 0.5rem;     /* engerer Abstand */
+  max-width: 280px; /* schmaler */
   margin: 0 auto;
+  padding: 0.5rem;  /* kompakter Innenabstand */
 }
 
 /* Detail Page – Bild mit goldenem Rahmen */
 .detail-image img {
   width: 100%; /* volle Breite des Containers */
   box-sizing: border-box;
-  border: 4px solid var(--color-gold); /* dicker goldener Rahmen */
+  border: 3px solid var(--color-gold); /* dünnerer goldener Rahmen */
   border-radius: 0.5rem; /* sanft abgerundete Ecken */
 }
 
@@ -166,30 +163,33 @@ body {
 .detail-info {
   width: 100%; /* volle Breite des Containers */
   box-sizing: border-box;
-  padding: 1rem; /* Innenabstand für Text */
-  border: 4px solid var(--color-gold); /* dicker Gold-Rand wie beim Bild */
+  padding: 0.75rem; /* kompakter Innenabstand */
+  border: 3px solid var(--color-gold); /* dünnerer Gold-Rand */
   border-radius: 0.5rem; /* dieselben Rundungen */
   background: var(--color-detail-bg); /* dein hellbrauner Hintergrund */
-}
-
-.detail-container .btn {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  border: 4px solid var(--color-gold); /* goldener Rahmen */
-  border-radius: 0.5rem; /* gleiche Rundung */
-  background: var(--color-detail-bg); /* heller Braunton */
-  color: var(--color-brown); /* braune Schrift */
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  margin-top: 0.5rem;
+  font-size: 0.9rem; /* kleinere Schrift */
 }
 
 .detail-info p {
   margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+/* Detail Page – Select-Star Button im gleichen Stil */
+.detail-container .btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;   /* kompakter */
+  border: 3px solid var(--color-gold); /* dünnerer Rand */
+  border-radius: 0.5rem; /* gleiche Rundung */
+  background: var(--color-detail-bg); /* heller Braunton */
+  color: var(--color-brown); /* braune Schrift */
+  font-weight: 500;
+  font-size: 0.95rem; /* leicht kleinere Schrift */
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 /* Camera Page */
@@ -215,7 +215,7 @@ body {
   cursor: pointer;
 }
 
-/* Goldene Haus-Ikone */
+/* Goldene Haus- und Buch-Ikone */
 .nav-icon.home .icon-home,
 .nav-icon.book .icon-book {
   width: 1.5rem;
@@ -223,9 +223,9 @@ body {
   display: block;
 }
 
-/* Abstand zwischen den Icons, falls nötig */
+/* Abstand zwischen den Icons */
 .bottom-nav .nav-icon + .nav-icon {
-  margin-left: 10rem;
+  margin-left: 1rem;
 }
 
 /* Detail-Image-Container für absolute Positionierung */
@@ -251,14 +251,15 @@ body {
   z-index: 1;
 }
 
-/* SVG im Button skalieren */
+/* SVG im Button fetter und rot */
 .detail-image .close svg {
   fill: red;
 }
+
 .detail-image .close svg path {
   fill: red;             /* Innenfarbe beibehalten */
   stroke: red;           /* roter Außenstrich */
-  stroke-width: 2px;     /* Stärke des Strichs – größer = fetter */
+  stroke-width: 2px;     /* Stärke des Strichs */
   stroke-linecap: round; /* abgerundete Enden */
   stroke-linejoin: round;/* abgerundete Ecken */
 }
@@ -285,6 +286,7 @@ body {
     opacity: 1;
   }
 }
+
 /* Special golden button for homepage */
 .btn.golden {
   background: linear-gradient(135deg, var(--color-gold), #e1b000);
